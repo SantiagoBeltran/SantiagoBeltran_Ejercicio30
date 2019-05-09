@@ -25,7 +25,6 @@ def plot_for_offset(ind):
     fig.canvas.draw()       # draw the canvas, cache the renderer
     image = np.frombuffer(fig.canvas.tostring_rgb(), dtype='uint8')
     image  = image.reshape(fig.canvas.get_width_height()[::-1] + (3,))
-
     return image
 
 kwargs_write = {'fps':1.0, 'quantizer':'nq'}
